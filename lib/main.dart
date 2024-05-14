@@ -96,7 +96,7 @@ class _MatrixMultiplyScreenState extends State<MatrixMultiplyScreen> {
                     _buildMatrixCell(s12, 0, 1, updateS),
                   ],
                 ),
-                SizedBox(width: 20),
+                //SizedBox(width: 20),
                 Column(
                   children: [
                     _buildMatrixCell(t11, 0, 0, updateT),
@@ -127,7 +127,7 @@ class _MatrixMultiplyScreenState extends State<MatrixMultiplyScreen> {
                     _buildMatrixCell(s22, 1, 1, updateS),
                   ],
                 ),
-                SizedBox(width: 20),
+                //SizedBox(width: 20),
                 Column(
                   children: [
                     _buildMatrixCell(t21, 1, 0, updateT),
@@ -143,15 +143,15 @@ class _MatrixMultiplyScreenState extends State<MatrixMultiplyScreen> {
               children: [
                 Column(
                   children: [
-                    Text("$p11",style: TextStyle(fontSize: 40,),),
-                    Text("$p21",style: TextStyle(fontSize: 40),),
+                    Text("$p11",style: TextStyle(fontSize: 40, color: Colors.blue),),
+                    Text("$p21",style: TextStyle(fontSize: 40, color: Colors.blue),),
                   ],
                 ),
                 SizedBox(width: 20),
                 Column(
                   children: [
-                    Text("$p12",style: TextStyle(fontSize: 40),),
-                    Text("$p22",style: TextStyle(fontSize: 40),),
+                    Text("$p12",style: TextStyle(fontSize: 40, color: Colors.blue),),
+                    Text("$p22",style: TextStyle(fontSize: 40, color: Colors.blue),),
                   ],
                 ),
               ],
@@ -169,7 +169,7 @@ class _MatrixMultiplyScreenState extends State<MatrixMultiplyScreen> {
         width: 50,
         height: 50,
         decoration: BoxDecoration(
-          border: Border.all(),
+          border: Border.all(color: Colors.blue),
         ),
         child: Center(
           child: Text(
