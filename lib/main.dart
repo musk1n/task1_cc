@@ -61,12 +61,21 @@ class _MatrixMultiplyScreenState extends State<MatrixMultiplyScreen> {
     });
   }
 
+  void updateP(){
+    setState(() {
+      p11 = (s11 * t11 + s12 * t21) % 10;
+      p12 = (s11 * t12 + s12 * t22) % 10;
+      p21 = (s21 * t11 + s22 * t21) % 10;
+      p22 = (s21 * t12 + s22 * t22) % 10;
+    });
+  }
+
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Matrix Multiplier'),
+        title: Center(child: Text('Matrix Multiplier')),
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
@@ -97,7 +106,18 @@ class _MatrixMultiplyScreenState extends State<MatrixMultiplyScreen> {
                 SizedBox(width: 20),
                 Column(
                   children: [
-                    Text("x", style: TextStyle(fontSize: 30)),
+                    FloatingActionButton(
+                      backgroundColor: Colors.blue,
+                      child: Text(
+                        "X",
+                        style: TextStyle(
+                          fontSize: 22,
+                        )
+                      ),
+                      onPressed: () {
+                        updateP();
+                      },
+                    ),
                   ],
                 ),
                 SizedBox(width: 20),
